@@ -12,7 +12,9 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>SI-PEPAK APP</title>
+    <title>
+        <?= $title; ?>
+    </title>
 
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css"
@@ -65,7 +67,7 @@
                             </li>
                         </ul>
                         <div class="user_option">
-                            <a href="">
+                            <a href="/login">
                                 <img src="images/user.png" alt="">
                                 <span>
                                     Login
@@ -99,7 +101,7 @@
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="/user">
+                <a href="/login">
                     <img src="images/play.png" alt="">
                 </a>
             </div>

@@ -22,11 +22,11 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_URL(); ?>css/sb-admin-2.min.css" rel="stylesheet">
     <style>
-        .bg-unugiri-image {
-            background: url('/images/unugiri.jpeg');
-            background-position: center;
-            background-size: cover;
-        }
+    .bg-unugiri-image {
+        background: url('/images/unugiri.jpeg');
+        background-position: center;
+        background-size: cover;
+    }
     </style>
 </head>
 
@@ -66,7 +66,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <a class="small" href="#">Forgot Password?</a>
                                     </div>
                                 </div>
                             </div>

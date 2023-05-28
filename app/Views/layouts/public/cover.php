@@ -281,7 +281,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img src="images/about-img.png" alt="">
+                        <img src="images/why.png" alt="">
                     </div>
                 </div>
             </div>
@@ -300,7 +300,7 @@
                         <div class="detail-box">
                             <div class="heading_container">
                                 <h2>
-                                    Trending Categories
+                                    Teams
                                 </h2>
                             </div>
                             <div class="tab_container">
@@ -314,7 +314,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Chairs
+                                            Wahyu Nur Cahyo
                                         </h5>
                                     </div>
                                 </div>
@@ -328,7 +328,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Tables
+                                            sample
                                         </h5>
                                     </div>
                                 </div>
@@ -342,7 +342,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Bads
+                                            Sample
                                         </h5>
                                     </div>
                                 </div>
@@ -356,7 +356,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Furnitures
+                                            Sample
                                         </h5>
                                     </div>
                                 </div>
@@ -369,18 +369,18 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="images/t-1.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why2.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-2.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why4.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="images/t-3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why5.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-4.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -700,12 +700,12 @@
         <div class="container">
             <div class="info_logo">
                 <h2>
-                    Digitf
                 </h2>
+                SIPEPAK
             </div>
             <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info_contact">
                         <h5>
                             About Shop
@@ -736,7 +736,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info_info">
                         <h5>
                             Informations
@@ -747,53 +747,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="info_insta">
-                        <h5>
-                            Instagram
-                        </h5>
-                        <div class="insta_container">
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-1">
-                                        <img src="images/i-1.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-2">
-                                        <img src="images/i-2.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-3">
-                                        <img src="images/i-3.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-4">
-                                        <img src="images/i-4.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="">
-                                    <div class="insta-box b-3">
-                                        <img src="images/i-5.jpg" alt="">
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="insta-box b-4">
-                                        <img src="images/i-6.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="info_form ">
                         <h5>
                             Newsletter
@@ -831,8 +785,8 @@
     <section class="container-fluid footer_section ">
         <div class="container">
             <p>
-                &copy; 2019 All Rights Reserved By
-                <a href="https://html.design/">Free Html Templates</a>
+                &copy; 2023 All Rights Reserved By
+                <a href="https://github.com/whyyy24">Whyyy-Project</a>
             </p>
         </div>
     </section>

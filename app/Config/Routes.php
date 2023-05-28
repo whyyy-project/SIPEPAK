@@ -35,13 +35,13 @@ $routes->get('/', 'Pages::index');
 $routes->get('/login', 'Pages::loginPage');
 
 // user pages
-$routes->post('/user', 'User::index');
-$routes->get('/user', 'User::index');
-$routes->get('/ajukan', 'User::index');
-$routes->get('/draft', 'User::index');
-$routes->get('/daftar-pengajuan', 'User::index');
-$routes->get('/riwayat', 'User::index');
-$routes->get('/profile', 'User::index');
+$routes->post('/user', 'UserController::index');
+$routes->get('/user', 'UserController::index');
+$routes->get('/ajukan', 'UserController::index');
+$routes->get('/draft', 'UserController::index');
+$routes->get('/daftar-pengajuan', 'UserController::index');
+$routes->get('/riwayat', 'UserController::index');
+$routes->get('/profile', 'UserController::index');
 
 
 

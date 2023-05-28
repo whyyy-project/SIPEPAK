@@ -34,7 +34,8 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_URL(); ?>user">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class="fas fa-book"></i>
+                    <!-- <img src=" <?= base_URL(); ?>images/sipepak.png" width="30%" alt=""> -->
                 </div>
                 <div class="sidebar-brand-text mx-3">SI-PEPAK <sup>APP</sup></div>
             </a>

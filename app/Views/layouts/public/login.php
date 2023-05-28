@@ -22,11 +22,11 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_URL(); ?>css/sb-admin-2.min.css" rel="stylesheet">
     <style>
-    .bg-unugiri-image {
-        background: url('/images/unugiri.jpeg');
-        background-position: center;
-        background-size: cover;
-    }
+        .bg-unugiri-image {
+            background: url('/images/unugiri.jpeg');
+            background-position: center;
+            background-size: cover;
+        }
     </style>
 </head>
 
@@ -53,11 +53,11 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user text-center"
                                                 id="exampleInputEmail" aria-describedby="username"
-                                                placeholder="Username">
+                                                placeholder="Username" name="username">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user text-center"
-                                                id="exampleInputPassword" placeholder="Password">
+                                                id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
                                         <hr>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
@@ -67,6 +67,10 @@
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="#">Forgot Password?</a>
+                                    </div>
+                                    <div class="text-center mt-3">
+                                        <hr>
+                                        <a class="small btn btn-link" href="<?= base_URL(); ?>">Back to Dashboard</a>
                                     </div>
                                 </div>
                             </div>

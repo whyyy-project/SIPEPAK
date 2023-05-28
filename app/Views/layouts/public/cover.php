@@ -57,12 +57,6 @@
                                 <a class="nav-link" href="about.html"> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="shop.html">Shop </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="furniture.html"> Furniture </a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact us</a>
                             </li>
                         </ul>
@@ -137,7 +131,7 @@
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
-                                                Read More
+                                                User Guide
                                             </a>
                                             <a href="" class="btn-2">
                                                 Contact us
@@ -147,7 +141,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="images/teams/why.png" alt="">
+                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +162,7 @@
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
-                                                Read More
+                                                User Guide
                                             </a>
                                             <a href="" class="btn-2">
                                                 Contact us
@@ -178,7 +172,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="images/teams/why.png" alt="">
+                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -199,7 +193,7 @@
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
-                                                Read More
+                                                User Guide
                                             </a>
                                             <a href="" class="btn-2">
                                                 Contact us
@@ -209,7 +203,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="images/teams/why.png" alt="">
+                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +224,7 @@
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
-                                                Read More
+                                                User Guide
                                             </a>
                                             <a href="" class="btn-2">
                                                 Contact us
@@ -240,7 +234,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="images/teams/why.png" alt="">
+                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -272,7 +266,7 @@
                             dolore magna aliqua. Ut enim ad minim veniam
                         </p>
                         <a href="">
-                            Read More
+                            User Guide
                         </a>
                     </div>
                 </div>
@@ -592,44 +586,44 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
     </script>
     <script type="text/javascript">
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            navText: [],
-            autoplay: true,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                420: {
-                    items: 2
-                },
-                1000: {
-                    items: 5
-                }
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: [],
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            420: {
+                items: 2
+            },
+            1000: {
+                items: 5
             }
+        }
 
-        });
+    });
     </script>
     <script>
-        var nav = $("#navbarSupportedContent");
-        var btn = $(".custom_menu-btn");
-        btn.click
-        btn.click(function (e) {
+    var nav = $("#navbarSupportedContent");
+    var btn = $(".custom_menu-btn");
+    btn.click
+    btn.click(function(e) {
 
-            e.preventDefault();
-            nav.toggleClass("lg_nav-toggle");
-            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-        });
+        e.preventDefault();
+        nav.toggleClass("lg_nav-toggle");
+        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    });
     </script>
     <script>
-        $('.carousel').on('slid.bs.carousel', function () {
-            $(".indicator-2 li").removeClass("active");
-            indicators = $(".carousel-indicators li.active").data("slide-to");
-            a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-        })
+    $('.carousel').on('slid.bs.carousel', function() {
+        $(".indicator-2 li").removeClass("active");
+        indicators = $(".carousel-indicators li.active").data("slide-to");
+        a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+    })
     </script>
 
 </body>

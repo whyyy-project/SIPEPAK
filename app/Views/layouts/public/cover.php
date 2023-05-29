@@ -135,8 +135,7 @@
                                             </span>
                                         </h1>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                            do eiusmod tempor incididunt ut labore
+                                            memudahkan anda dalam mengajukan proposal
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">

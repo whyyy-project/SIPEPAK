@@ -38,6 +38,7 @@ $routes->get('/login', 'Pages::loginPage');
 $routes->post('/user', 'UserController::index');
 $routes->get('/user', 'UserController::index');
 $routes->get('/ajukan', 'UserController::mengajukan');
+$routes->get('/ajukan/(:segment)', 'UserController::isiForm/$1');
 $routes->get('/draft', 'UserController::index');
 $routes->get('/daftar-pengajuan', 'UserController::index');
 $routes->get('/riwayat', 'UserController::index');

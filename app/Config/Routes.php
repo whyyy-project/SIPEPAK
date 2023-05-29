@@ -29,9 +29,26 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+// Public Pages
 $routes->get('/', 'Pages::index');
 $routes->get('/login', 'Pages::loginPage');
-$routes->get('/user', 'Pages::dashboard');
+
+// user pages
+$routes->post('/user', 'UserController::index');
+$routes->get('/user', 'UserController::index');
+$routes->get('/ajukan', 'UserController::mengajukan');
+$routes->get('/draft', 'UserController::index');
+$routes->get('/daftar-pengajuan', 'UserController::index');
+$routes->get('/riwayat', 'UserController::index');
+$routes->get('/profile', 'UserController::index');
+
+
+
+
+
+
+
 
 /*
  * --------------------------------------------------------------------

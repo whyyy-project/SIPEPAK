@@ -251,7 +251,7 @@
     <section class="about_section layout_padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <div class="detail-box">
                         <div class="heading_container">
                             <h2>
@@ -269,9 +269,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <div class="img-box">
-                        <img src="images/teams/why.png" alt="">
+                        <img src="images/icon.png" alt="">
                     </div>
                 </div>
             </div>
@@ -407,19 +407,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="images/t-3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-4.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
 
                                     <div class="img-box">
-                                        <img src="images/t-1.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-2.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -429,18 +429,18 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="images/t-4.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-1.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="images/t-3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-2.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -449,19 +449,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="images/t-1.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img src="images/t-4.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="images/t-3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-2.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -470,19 +470,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="images/t-1.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img src="images/t-4.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="images/t-3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-2.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -491,19 +491,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="images/t-1.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img src="images/t-4.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="images/t-3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="images/t-2.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>

@@ -30,15 +30,30 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group mb-5">
-                        <?php if ($atasan < 1): ?>
-                            <h3 class="text-danger">Atasan Belum di tentukan admin</h3>
-                        <?php endif; ?>
-                        <?php foreach ($atasan as $at): ?>
-                            <li class="list-group-item">
-                                <?= $at['nama_atasan']; ?>
-                                <?= $at['jabatan']; ?>
-                            </li>
-                        <?php endforeach; ?>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nama</th>
+                                    <th>Jabatan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 1; ?>
+                                <?php foreach ($atasan as $at) : ?>
+                                    <tr>
+                                        <td><?= $no;
+                                            $no++ ?></td>
+                                        <td>
+                                            <?= $at['nama_atasan']; ?>
+                                        </td>
+                                        <td>
+                                            <?= $at['jabatan']; ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
                     </ul>
                     <div class="mb-3 row">
                         <label for="judul" class="col-md-4 col-form-label">Judul</label>
@@ -49,13 +64,13 @@
                     <div class="mb-3 row">
                         <label for="inputtext" class="col-md-4 col-form-label">text</label>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" id="inputtext">
+                            <input type="text" class="form-control text-center" id="inputtext">
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="inputtext" class="col-md-4 col-form-label">text</label>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" id="inputtext">
+                            <input type="text" class="form-control text-center" id="inputtext" placeholder="coba">
                         </div>
                     </div>
                 </div>

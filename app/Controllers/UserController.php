@@ -27,13 +27,17 @@ class UserController extends BaseController
     }
     public function isiForm($slug)
     {
+        $dataModel = new BagianModel();
         $dataModel = new BagianAtasanModel();
         $data = [
             'title'  => 'Form Pengajuan | User',
             'atasan' => $dataModel->getDataBySlug($slug),
-            'bidang' => $dataModel->getBidang($slug)
+            'bidang' => $dataModel->getBidang($slug),
+            'message' => 'Data Bidang ' . $slug . ' Tidak Ditemukan'
         ];
-        // return view('template/template');
+        if ($dataModel->getDataBySlug($slug) == null) {
+            return view('errors/html/error_404', $data);
+        }
         return view('layouts/user/formPengajuan', $data);
     }
 }

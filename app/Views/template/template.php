@@ -19,7 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_URL(); ?>css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="<?= base_URL(); ?>favicon.ico">
 
 </head>
 
@@ -34,9 +33,10 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_URL(); ?>user">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-book"></i>
+                    <!-- <i class="fas fa-book"></i> -->
+                    <img src="<?= base_URL() ?>images/icon.png" width="40%" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-3">SI-PEPAK <sup>APP</sup></div>
+                <div class="sidebar-brand-text mx-3">SIPEPAK</div>
             </a>
 
             <!-- Divider -->
@@ -60,7 +60,7 @@
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw fa-book"></i>
                     <span>Pengajuan Proposal</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -75,7 +75,7 @@
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-fw fa-table"></i>
                     <span>Riwayat</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -100,7 +100,7 @@
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_URL(); ?>profile">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-wrench"></i>
                     <span>Setting Akun</span></a>
             </li>
 
@@ -135,7 +135,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="<?= base_url() ?>img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

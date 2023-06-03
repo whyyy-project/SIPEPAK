@@ -24,7 +24,6 @@ class BagianModel extends Model
 
     public function getData()
     {
-        return $this->orderBy('bidang', 'asc')->findAll();
+        return $this->where('status_section', 1)->orderBy('bidang', 'asc')->findAll();
     }
-
 }

@@ -24,55 +24,79 @@
     <!-- form -->
     <div class="row">
         <div class="col-md-12">
+            <!-- Daftar Nama Atasan -->
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Basic Card Example</h6>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group mb-5">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardAtasan" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardAtasan">
+                    <h6 class="m-0 font-weight-bold text-primary">Daftar Nama Atasan</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseCardAtasan">
+                    <div class="card-body">
                         <table class="table table-hover">
-                            <thead>
+                            <thead class="text-center">
                                 <tr>
-                                    <th>No.</th>
                                     <th>Nama</th>
                                     <th>Jabatan</th>
+                                    <th>Pengajuan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <?php $no = 1; ?>
+                            <tbody class="text-center">
                                 <?php foreach ($atasan as $at) : ?>
                                     <tr>
-                                        <td><?= $no;
-                                            $no++ ?></td>
                                         <td>
                                             <?= $at['nama_atasan']; ?>
                                         </td>
                                         <td>
                                             <?= $at['jabatan']; ?>
                                         </td>
+                                        <td>ke-<?= $at['no_urut'] ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                    </ul>
-                    <div class="mb-3 row">
-                        <label for="judul" class="col-md-4 col-form-label">Judul</label>
-                        <div class="col-md-8">
-                            <input type="text" class="form-control text-center" id="judul" placeholder="Masukan Judul">
-                        </div>
                     </div>
-                    <div class="mb-3 row">
-                        <label for="inputtext" class="col-md-4 col-form-label">text</label>
-                        <div class="col-md-8">
-                            <input type="text" class="form-control text-center" id="inputtext">
+                </div>
+            </div>
+            <!-- end Daftar Nama Atasan -->
+
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Form Pengajuan Proposal</h6>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post">
+                        <div class="mb-3 row">
+                            <label for="judul" class="col-md-4 col-form-label">Judul Proposal</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control text-center" id="judul" placeholder="Judul Proposal">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="inputtext" class="col-md-4 col-form-label">text</label>
-                        <div class="col-md-8">
-                            <input type="text" class="form-control text-center" id="inputtext" placeholder="coba">
+                        <div class="mb-3 row">
+                            <label for="anggaran" class="col-md-4 col-form-label">Anggaran</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control text-center" id="anggaran" placeholder="Kisaran Anggaran">
+                            </div>
                         </div>
-                    </div>
+                        <div class="mb-3 row">
+                            <label for="inputtext" class="col-md-4 col-form-label">text</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control text-center" id="inputtext" placeholder="coba">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="pdf" class="col-md-4 col-form-label">text</label>
+                            <div class="col-md-8">
+                                <input type="file" class="form-control" id="pdf">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mb-4">
+                            <button type="reset" class="btn btn-danger mr-3">Reset</button>
+                            <button class="btn btn-primary mr-3">Draft</button>
+                            <button class="btn btn-success">Ajukan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

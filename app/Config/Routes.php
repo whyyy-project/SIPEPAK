@@ -32,7 +32,7 @@ $routes->set404Override();
 
 // Public Pages
 $routes->get('/', 'Pages::index');
-$routes->get('/login', 'Pages::loginPage');
+// $routes->get('/login', 'Pages::loginPage');
 
 // user pages
 $routes->post('/user', 'UserController::index');

@@ -17,15 +17,13 @@
     </title>
 
     <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="<?= base_URL(); ?>css/bootstrap.css" />
 
     <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="<?= base_URL(); ?>css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -42,9 +40,7 @@
                     <a class="navbar-brand" href="/">
                         <img src="images/logo.png" alt="" />
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -260,9 +256,7 @@
 
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam
+                            Penugasan UAS Management Perangkat Lunak
                         </p>
                         <a href="">
                             User Guide
@@ -294,8 +288,7 @@
                                 </h2>
                             </div>
                             <div class="tab_container">
-                                <div class="t-link-box" data-toggle="collapse" data-target="#collapseOne"
-                                    aria-expanded="true" aria-controls="collapseOne">
+                                <div class="t-link-box" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     <div class="number">
                                         <h5>
                                             01
@@ -308,8 +301,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     <div class="number">
                                         <h5>
                                             02
@@ -322,8 +314,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     <div class="number">
                                         <h5>
                                             03
@@ -336,8 +327,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFour"
-                                    aria-expanded="false" aria-controls="collapseFour">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     <div class="number">
                                         <h5>
                                             04
@@ -346,12 +336,11 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Samplelll
+                                            Bakti Diana Anjarsari
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFive"
-                                    aria-expanded="false" aria-controls="collapseFour">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
                                     <div class="number">
                                         <h5>
                                             05
@@ -360,12 +349,11 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            hhg
+                                            Ach. syarif hidayatullah
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSix"
-                                    aria-expanded="false" aria-controls="collapseFour">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseFour">
                                     <div class="number">
                                         <h5>
                                             06
@@ -374,7 +362,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Sample
+                                            Aflahal Habib
                                         </h5>
                                     </div>
                                 </div>
@@ -382,8 +370,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne"
-                            data-parent="#accordion">
+                        <div class="collapse show" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
@@ -424,8 +411,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree"
-                            data-parent="#accordion">
+                        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
@@ -572,7 +558,7 @@
                                 <img src="images/location-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                BJN Cuy
+                                Jl. Ahmad Yani No. 10, Jambean, Sukorejo, Kec. Bojonegoro, Kabupaten Bojonegoro, Jawa Timur 62115
                             </p>
                         </div>
                         <div>
@@ -580,7 +566,7 @@
                                 <img src="images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
-                                +01 1234567890
+                                (0353) 887341
                             </p>
                         </div>
                         <div>
@@ -588,7 +574,7 @@
                                 <img src="images/envelope-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                demo@gmail.com
+                                lipk@unugiri.ac.id
                             </p>
                         </div>
                     </div>
@@ -599,7 +585,7 @@
                             Informations
                         </h5>
                         <p>
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            Universitas Nahdlatul Ulama Sunan Giri Bojonegoro
                         </p>
                     </div>
                 </div>
@@ -680,7 +666,7 @@
         var nav = $("#navbarSupportedContent");
         var btn = $(".custom_menu-btn");
         btn.click
-        btn.click(function (e) {
+        btn.click(function(e) {
 
             e.preventDefault();
             nav.toggleClass("lg_nav-toggle");
@@ -688,7 +674,7 @@
         });
     </script>
     <script>
-        $('.carousel').on('slid.bs.carousel', function () {
+        $('.carousel').on('slid.bs.carousel', function() {
             $(".indicator-2 li").removeClass("active");
             indicators = $(".carousel-indicators li.active").data("slide-to");
             a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");

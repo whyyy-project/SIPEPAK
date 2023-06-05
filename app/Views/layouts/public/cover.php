@@ -253,9 +253,7 @@
 
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua. Ut enim ad minim veniam
+                            Penugasan UAS Management Perangkat Lunak
                         </p>
                         <a href="">
                             User Guide
@@ -335,7 +333,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Samplelll
+                                            Bakti Diana Anjarsari
                                         </h5>
                                     </div>
                                 </div>
@@ -348,7 +346,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            hhg
+                                            Ach. syarif hidayatullah
                                         </h5>
                                     </div>
                                 </div>
@@ -361,7 +359,7 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Sample
+                                            Aflahal Habib
                                         </h5>
                                     </div>
                                 </div>
@@ -557,7 +555,7 @@
                                 <img src="images/location-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                BJN Cuy
+                                Jl. Ahmad Yani No. 10, Jambean, Sukorejo, Kec. Bojonegoro, Kabupaten Bojonegoro, Jawa Timur 62115
                             </p>
                         </div>
                         <div>
@@ -565,7 +563,7 @@
                                 <img src="images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
-                                +01 1234567890
+                                (0353) 887341
                             </p>
                         </div>
                         <div>
@@ -573,7 +571,7 @@
                                 <img src="images/envelope-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                demo@gmail.com
+                                lipk@unugiri.ac.id
                             </p>
                         </div>
                     </div>
@@ -584,7 +582,7 @@
                             Informations
                         </h5>
                         <p>
-                            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            Universitas Nahdlatul Ulama Sunan Giri Bojonegoro
                         </p>
                     </div>
                 </div>

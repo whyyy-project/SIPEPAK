@@ -13,6 +13,7 @@
         <?= $title; ?>
     </title>
 
+    <link rel="stylesheet" href="<?= base_URL() ?>css/bootstrap.css">
     <!-- Custom fonts for this template-->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="<?= base_URL(); ?>vendor_style/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -209,6 +210,7 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_URL(); ?>js/bootstrap.js"></script>
     <script src="<?= base_URL(); ?>vendor_style/jquery/jquery.min.js"></script>
     <script src="<?= base_URL(); ?>vendor_style/bootstrap/js/bootstrap.bundle.min.js"></script>
 

@@ -33,7 +33,7 @@ class UserController extends BaseController
             'title'  => 'Form Pengajuan | User',
             'atasan' => $dataModel->getDataBySlug($slug),
             'bidang' => $dataModel->getBidang($slug),
-            'message' => 'Data Bidang ' . $slug . ' Tidak Ditemukan'
+            'message' => 'Data Bidang atau Atasan ' . $slug . ' Tidak Ditemukan'
         ];
         if ($dataModel->getDataBySlug($slug) == null) {
             return view('errors/html/error_404', $data);

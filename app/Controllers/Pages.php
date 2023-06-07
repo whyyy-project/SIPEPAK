@@ -27,7 +27,7 @@ class Pages extends BaseController
             $data = [
                 'title' => 'Dashboard | Admin'
             ];
-            return view('layouts/user/dashboard', $data);
+            return view('layouts/admin/dashboard', $data);
         } else if (in_groups('atasan')) {
             $data = [
                 'title' => 'Dashboard | Atasan'

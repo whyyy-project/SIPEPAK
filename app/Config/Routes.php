@@ -33,17 +33,23 @@ $routes->set404Override();
 
 // $routes->get('/', 'Pages::index', ['filter' => 'role:user,admin,atasan']);
 $routes->get('/', 'Pages::index');
-$routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'permission:dashboard']);
 // $routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'role:user,admin,atasan']);
-
-
-
-// Public Pages
-// $routes->get('/login', 'Pages::loginPage');
-
-// user pages
+$routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'role:user,admin,atasan']);
 
 $routes->group('', ['filter' => 'role:user'], function ($routes) {
+    $routes->get('/dashboard', 'Pages::dashboard');
+    $routes->post('/user', 'UserController::index');
+    $routes->get('/user', 'UserController::index');
+    $routes->get('/ajukan', 'UserController::mengajukan');
+    $routes->get('/ajukan/(:segment)', 'UserController::isiForm/$1');
+    $routes->post('/ajukan/(:segment)', 'UserController::uploadProposal/$1');
+    $routes->get('/draft', 'UserController::index');
+    $routes->get('/daftar-pengajuan', 'UserController::index');
+    $routes->get('/riwayat', 'UserController::index');
+    $routes->get('/profile', 'UserController::index');
+});
+$routes->group('', ['filter' => 'role:admin'], function ($routes) {
+    $routes->get('/dashboard', 'Pages::dashboard');
     $routes->post('/user', 'UserController::index');
     $routes->get('/user', 'UserController::index');
     $routes->get('/ajukan', 'UserController::mengajukan');

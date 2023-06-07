@@ -66,45 +66,54 @@
                     <h6 class="m-0 font-weight-bold text-primary">Form Pengajuan Proposal</h6>
                 </div>
                 <div class="card-body">
-                    <form action="" method="post">
+                    <form method="post" enctype="multipart/form-data" action="<?= base_url() ?>ajukan/<?= $slug ?>">
+                        <?php if (session()->has('errors')) : ?>
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <?php foreach (session('errors') as $error) : ?>
+                                        <li><?= $error ?></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            </div>
+                        <?php endif ?>
+
                         <div class="mb-3 row">
                             <label for="judul" class="col-md-4 col-form-label">Judul Proposal</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control text-center" id="judul" placeholder="Judul Proposal">
+                                <input type="text" name="judul" class="form-control text-center" id="judul" placeholder="Judul Proposal">
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="anggaran" class="col-md-4 col-form-label">Anggaran</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control text-center" id="anggaran" placeholder="Kisaran Anggaran">
+                                <input type="text" name="anggaran" class="form-control text-center" id="anggaran" placeholder="Kisaran Anggaran">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputtext" class="col-md-4 col-form-label">Waktu Acara</label>
+                            <label for="tanggal" class="col-md-4 col-form-label">Waktu Acara</label>
                             <div class="col-md-4">
-                                <input type="date" class="form-control text-center" id="inputtext" placeholder="coba">
+                                <input type="date" name="mulai" class="form-control text-center" id="tanggal">
                             </div>
                             <div class="col-md-4">
-                                <input type="date" class="form-control text-center" id="inputtext" placeholder="coba">
+                                <input type="date" name="selesai" class="form-control text-center" id="tanggal">
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="inputtext" class="col-md-4 col-form-label">Keterangan Kegiatan</label>
+                            <label for="keterangan" class="col-md-4 col-form-label">Keterangan Kegiatan</label>
                             <div class="col-md-8">
-                                <textarea name="ket" id="" class="form-control text-center" placeholder="Keterangan"></textarea>
+                                <textarea name="keterangan" id="keterangan" class="form-control text-center" placeholder="Keterangan"></textarea>
                             </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="pdf" class="col-md-4 col-form-label">Upload Proposal</label>
                             <div class="col-md-8">
-                                <input type="file" class="form-control" id="pdf">
+                                <input type="file" class="form-control" name="pdf_file" id="pdf">
                             </div>
                         </div>
 
                         <div class="row justify-content-center mb-4">
-                            <button type="reset" class="btn btn-danger mr-3">Reset</button>
-                            <button class="btn btn-primary mr-3">Draft</button>
-                            <button class="btn btn-success">Ajukan</button>
+                            <button type="reset" class="btn btn-danger mr-2">Reset</button>
+                            <button type="submit" class="btn btn-success">Ajukan</button>
                         </div>
                     </form>
                 </div>

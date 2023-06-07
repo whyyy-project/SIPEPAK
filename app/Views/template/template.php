@@ -30,9 +30,8 @@
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_URL(); ?>user">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_URL(); ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <!-- <i class="fas fa-book"></i> -->
                     <img src="<?= base_URL() ?>images/icon.png" width="40%" alt="">
@@ -45,51 +44,52 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_URL(); ?>user">
+                <a class="nav-link" href="<?= base_URL(); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Pengajuan
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Pengajuan Proposal</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Opsi</h6>
-                        <a class="collapse-item" href="<?= base_URL() ?>ajukan">Ajukan Proposal</a>
-                        <a class="collapse-item" href="<?= base_URL(); ?>draft">Draft Pengajuan</a>
-                    </div>
+            <?php if (in_groups('user')) : ?>
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Pengajuan
                 </div>
-            </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Riwayat</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Riwayat Pengajuan</h6>
-                        <a class="collapse-item" href="<?= base_URL(); ?>daftar-pengajuan">Daftar Pengajuan</a>
-                        <a class="collapse-item" href="<?= base_URL(); ?>riwayat">Riwayat Pengajuan</a>
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fas fa-fw fa-book"></i>
+                        <span>Pengajuan Proposal</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Opsi</h6>
+                            <a class="collapse-item" href="<?= base_URL() ?>ajukan">Ajukan Proposal</a>
+                            <a class="collapse-item" href="<?= base_URL(); ?>draft">Draft Pengajuan</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Riwayat</span>
+                    </a>
+                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Riwayat Pengajuan</h6>
+                            <a class="collapse-item" href="<?= base_URL(); ?>daftar-pengajuan">Daftar Pengajuan</a>
+                            <a class="collapse-item" href="<?= base_URL(); ?>riwayat">Riwayat Pengajuan</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+            <?php endif; ?>
+
             <?php if (in_groups('admin')) : ?>
                 <!-- Heading -->
                 <div class="sidebar-heading">
@@ -162,7 +162,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= user()->username ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= user()->email ?></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url() ?>img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->

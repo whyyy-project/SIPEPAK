@@ -42,14 +42,14 @@ $routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'permission:dashboar
 // $routes->get('/login', 'Pages::loginPage');
 
 // user pages
-$routes->post('/user', 'UserController::index');
-$routes->get('/user', 'UserController::index');
-$routes->get('/ajukan', 'UserController::mengajukan');
-$routes->get('/ajukan/(:segment)', 'UserController::isiForm/$1');
-$routes->get('/draft', 'UserController::index');
-$routes->get('/daftar-pengajuan', 'UserController::index');
 
-$routes->group('user', ['filter' => 'role:user'], function ($routes) {
+$routes->group('', ['filter' => 'role:user'], function ($routes) {
+    $routes->post('/user', 'UserController::index');
+    $routes->get('/user', 'UserController::index');
+    $routes->get('/ajukan', 'UserController::mengajukan');
+    $routes->get('/ajukan/(:segment)', 'UserController::isiForm/$1');
+    $routes->get('/draft', 'UserController::index');
+    $routes->get('/daftar-pengajuan', 'UserController::index');
     $routes->get('/riwayat', 'UserController::index');
     $routes->get('/profile', 'UserController::index');
 });

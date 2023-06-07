@@ -25,6 +25,42 @@
     <div class="row">
         <div class="col-md-12">
 
+            <!-- Daftar Nama Atasan -->
+            <div class="card shadow mb-4">
+                <!-- Card Header - Accordion -->
+                <a href="#collapseCardAtasan" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardAtasan">
+                    <h6 class="m-0 font-weight-bold text-primary">Daftar Nama Atasan</h6>
+                </a>
+                <!-- Card Content - Collapse -->
+                <div class="collapse show" id="collapseCardAtasan">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead class="text-center">
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Jabatan</th>
+                                    <th>Pengajuan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <?php foreach ($atasan as $at) : ?>
+                                    <tr>
+                                        <td>
+                                            <?= $at['nama_atasan']; ?>
+                                        </td>
+                                        <td>
+                                            <?= $at['jabatan']; ?>
+                                        </td>
+                                        <td>ke-<?= $at['no_urut'] ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- end Daftar Nama Atasan -->
+
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Form Pengajuan Proposal</h6>
@@ -74,41 +110,6 @@
                 </div>
             </div>
 
-            <!-- Daftar Nama Atasan -->
-            <div class="card shadow mb-4">
-                <!-- Card Header - Accordion -->
-                <a href="#collapseCardAtasan" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardAtasan">
-                    <h6 class="m-0 font-weight-bold text-primary">Daftar Nama Atasan</h6>
-                </a>
-                <!-- Card Content - Collapse -->
-                <div class="collapse show" id="collapseCardAtasan">
-                    <div class="card-body">
-                        <table class="table table-hover">
-                            <thead class="text-center">
-                                <tr>
-                                    <th>Nama</th>
-                                    <th>Jabatan</th>
-                                    <th>Pengajuan</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center">
-                                <?php foreach ($atasan as $at) : ?>
-                                    <tr>
-                                        <td>
-                                            <?= $at['nama_atasan']; ?>
-                                        </td>
-                                        <td>
-                                            <?= $at['jabatan']; ?>
-                                        </td>
-                                        <td>ke-<?= $at['no_urut'] ?></td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!-- end Daftar Nama Atasan -->
         </div>
     </div>
 </div>

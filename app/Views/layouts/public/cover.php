@@ -391,7 +391,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/ridho1.jpg" width='100px' alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
                                     </div>
                                     <div class="img-box">
                                         <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">

@@ -122,7 +122,7 @@
                                             </span>
                                         </h1>
                                         <p>
-                                            memudahkan anda dalam mengajukan proposal
+                                            Selamat datang di SIPEPAK, membantu anda dalam mengajukan proposal se praktis mungkin
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
@@ -152,7 +152,7 @@
                                             </span>
                                         </h1>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            Memudahkan anda dalam mengajukan proposal hanya dengan sekali klik
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
@@ -182,7 +182,7 @@
                                             </span>
                                         </h1>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            Percepat proses pelaksanaan kegiatan anda dengan SIPEPAK
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
@@ -212,7 +212,7 @@
                                             </span>
                                         </h1>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            Lebih cepat dengan SIPEPAK
                                         </p>
                                         <div class="btn-box">
                                             <a href="" class="btn-1">
@@ -253,7 +253,7 @@
 
                         </div>
                         <p>
-                            Penugasan UAS Management Perangkat Lunak
+                            Penugasan UAS Management Perangkat Lunak,
                         </p>
                         <a href="">
                             User Guide
@@ -391,7 +391,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/ridho1.jpg" width='100px' alt="">
                                     </div>
                                     <div class="img-box">
                                         <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
@@ -474,7 +474,7 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">

@@ -90,7 +90,32 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
+            <?php if (in_groups('admin')) : ?>
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Data Akun
+                </div>
 
+                <!-- Nav Item - Pages Collapse Menu -->
+
+                <!-- Nav Item - Tables -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dataAkun" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-users"></i>
+                        <span>Setting Akun</span>
+                    </a>
+                    <div id="dataAkun" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Data Akun</h6>
+                            <a class="collapse-item" href="#">Akun User</a>
+                            <a class="collapse-item" href="#">Akun Atasan</a>
+                            <a class="collapse-item" href="#">Akun Admin</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
+            <?php endif; ?>
             <!-- Heading -->
             <div class="sidebar-heading">
                 Akun
@@ -102,11 +127,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_URL(); ?>profile">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Setting Akun</span></a>
+                    <span>Setting Profile</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+
+
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -135,7 +162,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= user()->username ?></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url() ?>img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -171,7 +198,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span> &copy; 2023 All Rights Reserved By
+                        <span> &copy; <?= date('Y') ?> All Rights Reserved By
                             <a href="https://github.com/whyyy24" class="btn-link">Whyyy-Project</a>
                         </span>
                     </div>
@@ -203,7 +230,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="/">Logout</a>
+                    <a class="btn btn-primary" href="<?= base_url() ?>logout">Logout</a>
                 </div>
             </div>
         </div>

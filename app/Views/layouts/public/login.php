@@ -49,13 +49,12 @@
                                     </div>
                                     <?= view('Myth\Auth\Views\_message_block') ?>
 
-                                    <form action="<?= url_to('login') ?>" method="post">
+                                    <form action="<?= url_to('login') ?>" class="user" method="post">
                                         <?= csrf_field() ?>
-
                                         <?php if ($config->validFields === ['email']) : ?>
                                             <div class="form-group">
                                                 <label for="login"><?= lang('Auth.email') ?></label>
-                                                <input type="email" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
+                                                <input type="email" class="form-control form-control-user text-center <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.email') ?>">
                                                 <div class="invalid-feedback">
                                                     <?= session('errors.login') ?>
                                                 </div>
@@ -63,7 +62,7 @@
                                         <?php else : ?>
                                             <div class="form-group">
                                                 <label for="login"><?= lang('Auth.emailOrUsername') ?></label>
-                                                <input type="text" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                                <input type="text" class="form-control form-control-user text-center <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
                                                 <div class="invalid-feedback">
                                                     <?= session('errors.login') ?>
                                                 </div>
@@ -72,7 +71,7 @@
 
                                         <div class="form-group">
                                             <label for="password"><?= lang('Auth.password') ?></label>
-                                            <input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
+                                            <input type="password" name="password" class="form-control form-control-user text-center <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
                                             <div class="invalid-feedback">
                                                 <?= session('errors.password') ?>
                                             </div>
@@ -89,7 +88,7 @@
 
                                         <br>
 
-                                        <button type="submit" class="btn btn-primary btn-block"><?= lang('Auth.loginAction') ?></button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block"><?= lang('Auth.loginAction') ?></button>
                                     </form>
 
                                     <hr>

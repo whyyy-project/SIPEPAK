@@ -32,7 +32,7 @@ class Filters extends BaseConfig
      */
     public array $globals = [
         'before' => [
-            'honeypot',
+            // 'honeypot',
             // 'login',
             // 'csrf',
             // 'invalidchars',
@@ -56,7 +56,9 @@ class Filters extends BaseConfig
      * permits any HTTP method to access a controller. Accessing the controller
      * with a method you don’t expect could bypass the filter.
      */
-    public array $methods = [];
+    public array $methods = [
+        'login' => ['before' => ['/']]
+    ];
 
     /**
      * List of filter aliases that should run on any

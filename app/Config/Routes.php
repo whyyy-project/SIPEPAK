@@ -30,8 +30,15 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-// Public Pages
+
+// $routes->get('/', 'Pages::index', ['filter' => 'role:user,admin,atasan']);
 $routes->get('/', 'Pages::index');
+$routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'permission:dashboard']);
+// $routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'role:user,admin,atasan']);
+
+
+
+// Public Pages
 // $routes->get('/login', 'Pages::loginPage');
 
 // user pages

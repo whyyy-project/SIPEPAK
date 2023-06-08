@@ -126,7 +126,7 @@
                         <div class="row justify-content-center mb-4">
 
                             <button type="reset" class="btn btn-danger mr-2">Reset</button>
-                            <button type="submit" class="btn btn-success">Ajukan</button>
+                            <button type="submit" class="btn btn-success">Simpan</button>
                         </div>
                     </form>
                 </div>

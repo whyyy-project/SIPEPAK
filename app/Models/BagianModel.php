@@ -26,4 +26,8 @@ class BagianModel extends Model
     {
         return $this->where('status_section', 1)->orderBy('bidang', 'asc')->findAll();
     }
+    public function getIdSection($slug)
+    {
+        return $this->where('slug', $slug)->limit(1)->findAll();
+    }
 }

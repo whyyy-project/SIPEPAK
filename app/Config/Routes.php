@@ -41,8 +41,8 @@ $routes->group('', ['filter' => 'role:user'], function ($routes) {
     $routes->post('/user', 'UserController::index');
     $routes->get('/user', 'UserController::index');
     $routes->get('/ajukan', 'UserController::mengajukan');
+    $routes->post('/ajukan/simpan/(:segment)', 'ProposalUserController::index/$1');
     $routes->get('/ajukan/(:segment)', 'UserController::isiForm/$1');
-    $routes->post('/ajukan/(:segment)', 'UserController::uploadProposal/$1');
     $routes->get('/draft', 'UserController::index');
     $routes->get('/daftar-pengajuan', 'UserController::index');
     $routes->get('/riwayat', 'UserController::index');

@@ -19,6 +19,17 @@
         </p>
     </div>
     <!-- end page heading -->
+    <?php if (session()->getFlashData('success')) : ?>
+        <div class="alert alert-success">
+            <?= session()->getFlashData('success') ?>
+        </div>
+    <?php endif ?>
+
+    <?php if (session()->getFlashData('error')) : ?>
+        <div class="alert alert-danger">
+            <?= session()->getFlashData('error') ?>
+        </div>
+    <?php endif ?>
 
 
     <!-- form -->
@@ -32,31 +43,29 @@
                     <h6 class="m-0 font-weight-bold text-primary">Daftar Nama Atasan</h6>
                 </a>
                 <!-- Card Content - Collapse -->
-                <div class="collapse show" id="collapseCardAtasan">
-                    <div class="card-body">
-                        <table class="table table-hover">
-                            <thead class="text-center">
+                <div class="collapse" id="collapseCardAtasan">
+                    <table class="table table-hover">
+                        <thead class="text-center">
+                            <tr>
+                                <th>Nama</th>
+                                <th>Jabatan</th>
+                                <th>Pengajuan</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <?php foreach ($atasan as $at) : ?>
                                 <tr>
-                                    <th>Nama</th>
-                                    <th>Jabatan</th>
-                                    <th>Pengajuan</th>
+                                    <td>
+                                        <?= $at['nama_atasan']; ?>
+                                    </td>
+                                    <td>
+                                        <?= $at['jabatan']; ?>
+                                    </td>
+                                    <td>ke-<?= $at['no_urut'] ?></td>
                                 </tr>
-                            </thead>
-                            <tbody class="text-center">
-                                <?php foreach ($atasan as $at) : ?>
-                                    <tr>
-                                        <td>
-                                            <?= $at['nama_atasan']; ?>
-                                        </td>
-                                        <td>
-                                            <?= $at['jabatan']; ?>
-                                        </td>
-                                        <td>ke-<?= $at['no_urut'] ?></td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <!-- end Daftar Nama Atasan -->
@@ -66,7 +75,7 @@
                     <h6 class="m-0 font-weight-bold text-primary">Form Pengajuan Proposal</h6>
                 </div>
                 <div class="card-body">
-                    <form method="post" enctype="multipart/form-data" action="<?= base_url() ?>ajukan/<?= $slug ?>">
+                    <form method="post" enctype="multipart/form-data" action="<?= base_url() ?>ajukan/simpan/<?= $slug ?>">
                         <?php if (session()->has('errors')) : ?>
                             <div class="alert alert-danger">
                                 <ul>
@@ -76,42 +85,46 @@
                                 </ul>
                             </div>
                         <?php endif ?>
+                        <div class="mb-3 row">
+                            <label for="judul" class="col-md-4 col-form-label">Judul Proposal <sup class="text-danger">*</sup></label>
+                            <div class="col-md-8">
+                                <input required type="text" name="judul" class="form-control text-center" id="judul" placeholder="Judul Proposal" value="<?= old('judul') ?>">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label class="col-md-4 col-form-label">Waktu Acara <sup class="text-danger">*</sup></label>
+                            <div class="col-md-4">
+                                <input required type="date" name="mulai" class="form-control text-center" value="<?= old('mulai') ?>">
+                            </div>
+                            <div class="col-md-4">
+                                <input required type="date" name="selesai" class="form-control text-center" value="<?= old('selesai') ?>">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="keterangan" class="col-md-4 col-form-label">Keterangan Kegiatan <sup class="text-danger">*</sup></label>
+                            <div class="col-md-8">
+                                <textarea name="keterangan" id="keterangan" class="form-control text-center" placeholder="Keterangan" required><?= old("keterangan") ?></textarea>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="pdf" class="col-md-4 col-form-label">Upload Proposal <sup class="text-danger">*</sup></label>
+                            <div class="col-md-8">
+                                <input required type="file" class="form-control" name="pdf" id="pdf">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="status" class="col-md-4 col-form-label">Pilih Opsi <sup class="text-danger">*</sup></label>
+                            <div class="col-md-8">
+                                <select name="status" class="form-control text-center" id="status">
+                                    <option value="draft">Simpan sebagai Draft</option>
+                                    <option value="filed">Ajukan</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <div class="mb-3 row">
-                            <label for="judul" class="col-md-4 col-form-label">Judul Proposal</label>
-                            <div class="col-md-8">
-                                <input type="text" name="judul" class="form-control text-center" id="judul" placeholder="Judul Proposal">
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="anggaran" class="col-md-4 col-form-label">Anggaran</label>
-                            <div class="col-md-8">
-                                <input type="text" name="anggaran" class="form-control text-center" id="anggaran" placeholder="Kisaran Anggaran">
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="tanggal" class="col-md-4 col-form-label">Waktu Acara</label>
-                            <div class="col-md-4">
-                                <input type="date" name="mulai" class="form-control text-center" id="tanggal">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="date" name="selesai" class="form-control text-center" id="tanggal">
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="keterangan" class="col-md-4 col-form-label">Keterangan Kegiatan</label>
-                            <div class="col-md-8">
-                                <textarea name="keterangan" id="keterangan" class="form-control text-center" placeholder="Keterangan"></textarea>
-                            </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="pdf" class="col-md-4 col-form-label">Upload Proposal</label>
-                            <div class="col-md-8">
-                                <input type="file" class="form-control" name="pdf_file" id="pdf">
-                            </div>
-                        </div>
 
                         <div class="row justify-content-center mb-4">
+
                             <button type="reset" class="btn btn-danger mr-2">Reset</button>
                             <button type="submit" class="btn btn-success">Ajukan</button>
                         </div>

@@ -38,7 +38,7 @@ class ProposalUserController extends BaseController
         if ($this->request->getFile('pdf')->isValid()) {
             // Dapatkan file yang diunggah
             $pdfFile = $this->request->getFile('pdf');
-            $renamePdf = date('Y-m-d') . " " . user()->email . $this->request->getPost('judul') . " " . $pdfFile->getName();
+            $renamePdf = date('Y-m-d') . " - " . user()->email . $this->request->getPost('judul') . " - " . $pdfFile->getName();
             // Data proposal
             $proposalData = [
                 'id' => user()->id,

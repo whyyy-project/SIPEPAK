@@ -91,6 +91,7 @@ class ProposalUserController extends BaseController
                     $this->insertStatus->insert($statusPengajuan);
                 endforeach;
 
+                // success
                 return redirect()->to($link)->with('success', 'Berhasil Upload Proposal.');
             } else {
                 return redirect()->to($link)->with('error', 'Terjadi kesalahan saat menyimpan data');

@@ -33,6 +33,7 @@ $routes->set404Override();
 
 // $routes->get('/', 'Pages::index', ['filter' => 'role:user,admin,atasan']);
 $routes->get('/', 'Pages::index');
+
 $routes->get('/dashboard', 'Pages::dashboard', ['filter' => 'role:user,admin,atasan']);
 
 $routes->group('', ['filter' => 'role:user'], function ($routes) {

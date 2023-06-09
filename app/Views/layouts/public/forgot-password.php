@@ -63,7 +63,7 @@
                                     <div class="text-center">
                                         <a class="small" href="<?= base_url() ?>login">Login</a>
                                     </div>
-                                    <div class="text-center">
+                                    <div class="text-center mt-1">
                                         <a class="small" href="<?= base_url() ?>">Back to Dashboard</a>
                                     </div>
                                 </div>

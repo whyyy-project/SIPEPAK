@@ -116,8 +116,8 @@
                             <label for="status" class="col-md-4 col-form-label">Pilih Opsi <sup class="text-danger">*</sup></label>
                             <div class="col-md-8">
                                 <select name="status" class="form-control text-center" id="status">
-                                    <option value="draft">Simpan sebagai Draft</option>
-                                    <option value="filed">Ajukan</option>
+                                    <option value="draft" <?= old('status') === 'draft' ? 'selected' : '' ?>>Simpan sebagai Draft</option>
+                                    <option value="filed" <?= old('status') === 'filed' ? 'selected' : '' ?>>Ajukan</option>
                                 </select>
                             </div>
                         </div>

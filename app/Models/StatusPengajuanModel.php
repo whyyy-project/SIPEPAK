@@ -26,4 +26,15 @@ class StatusPengajuanModel extends Model
     {
         return $this->insert($data);
     }
+    public function GetDataAtasan()
+    {
+        return $this->db->table('tb_status_pengajuan')
+            ->select('tb_pengajuan.id_pengajuan, tb_status_pengajuan.status as status_pengajuan, tb_data_section.no_urut, tb_atasan.nama_atasan')
+            ->join('tb_data_section', 'tb_data_section.id_data_section = tb_status_pengajuan.id_data_section', 'right')
+            ->join('tb_atasan', 'tb_atasan.id_atasan = tb_data_section.id_atasan', 'left')
+            ->join('tb_pengajuan', 'tb_pengajuan.id_pengajuan = tb_status_pengajuan.id_pengajuan')
+            ->orderBy('tb_data_section.no_urut', 'asc')
+            ->get()
+            ->getResultArray();
+    }
 }

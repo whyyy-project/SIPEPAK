@@ -19,6 +19,10 @@ class Pages extends BaseController
             return view('layouts/public/cover', $data);
         }
     }
+    public function login()
+    {
+        return view('layouts/public/login');
+    }
 
 
     public function dashboard()

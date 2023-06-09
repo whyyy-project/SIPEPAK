@@ -20,6 +20,8 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_URL(); ?>css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>vendor_style/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -76,11 +78,11 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-table"></i>
-                        <span>Riwayat</span>
+                        <span>Data Pengajuan</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Riwayat Pengajuan</h6>
+                            <h6 class="collapse-header">Data Pengajuan</h6>
                             <a class="collapse-item" href="<?= base_URL(); ?>daftar-pengajuan">Daftar Pengajuan</a>
                             <a class="collapse-item" href="<?= base_URL(); ?>riwayat">Riwayat Pengajuan</a>
                         </div>
@@ -246,7 +248,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="<?= base_URL(); ?>js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="<?= base_url() ?>vendor_style/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>vendor_style/datatables/dataTables.bootstrap4.min.js"></script>
 
+    <!-- Page levbaseel custom scripts -->
+    <script src="<?= base_url() ?>js/demo/datatables-demo.js"></script>
 
 </body>
 

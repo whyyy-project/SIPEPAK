@@ -65,7 +65,6 @@ class ProposalUserController extends BaseController
                 'pdf' => $renamePdf,
                 'status' => $this->request->getPost('status'),
             ];
-            // dd($proposalData);
 
             // Pindahkan file ke direktori tujuan
             $pdfFile->move(ROOTPATH . '\Proposal-PDF', $renamePdf);
@@ -99,6 +98,27 @@ class ProposalUserController extends BaseController
         } else {
             // Jika tidak ada file yang diunggah, tampilkan pesan error
             return redirect()->to($link)->with('error', 'Tidak Ada file yang di upload.');
+        }
+    }
+    public function downloadProposal($fileName)
+    {
+        $proposalPath = '../Proposal-PDF/' . $fileName; // Path file proposal
+        // Verifikasi apakah file ada di direktori
+        if (file_exists($proposalPath)) {
+            // Set header response
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/octet-stream');
+            header('Content-Disposition: attachment; filename=' . $fileName);
+            header('Content-Transfer-Encoding: binary');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($proposalPath));
+            // Baca file dan kirimkan ke output
+            readfile($proposalPath);
+        } else {
+            // File tidak ditemukan, lakukan penanganan kesalahan yang sesuai
+            return "File Not Found";
         }
     }
 }

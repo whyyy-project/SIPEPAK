@@ -5,16 +5,23 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\BagianModel;
 use App\Models\BagianAtasanModel;
+use App\Models\UploadProposalModel;
+use App\Models\StatusPengajuanModel;
+use CodeIgniter\I18n\Time;
 
 class UserController extends BaseController
 {
     protected $bidangModel;
     protected $bidangAtasanModel;
+    protected $pengajuan;
+    protected $dataPengajuan;
 
     public function __construct()
     {
         $this->bidangModel = new BagianModel();
         $this->bidangAtasanModel = new BagianAtasanModel();
+        $this->pengajuan = new UploadProposalModel();
+        $this->dataPengajuan = new StatusPengajuanModel();
     }
 
     public function index()
@@ -46,5 +53,33 @@ class UserController extends BaseController
             return view('errors/html/error_404', $data);
         }
         return view('layouts/user/formPengajuan', $data);
+    }
+    public function daftarPengajuan()
+    {
+
+
+        $id_user = user()->id;
+
+        $dataProposal = $this->pengajuan->getDataPengajuan($id_user);
+        // Loop melalui dataProposal untuk mengubah format tanggal
+        foreach ($dataProposal as $proposal) {
+            $mulai = Time::createFromFormat('Y-m-d', $proposal['mulai']);
+            $selesai = Time::createFromFormat('Y-m-d', $proposal['selesai']);
+            // Mengubah format tanggal menjadi "d F Y"
+            $formattedDate1 = $mulai->format('d F Y');
+            $formattedDate2 = $selesai->format('d F Y');
+            // Menyimpan tanggal yang sudah diubah formatnya ke dalam dataProposal
+            $proposal['mulai'] = $formattedDate1;
+            $proposal['selesai'] = $formattedDate2;
+        }
+
+        $data = [
+            'title'   => 'Pengajuan | User',
+            'id_user' => $id_user,
+            'dataProposal' => $dataProposal,
+            'dataStatus' => $this->dataPengajuan->GetDataAtasan(),
+        ];
+        // return view('template/template');
+        return view('layouts/user/daftarPengajuan', $data);
     }
 }

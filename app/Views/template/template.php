@@ -56,20 +56,20 @@
             <?php if (in_groups('user')) : ?>
                 <!-- Heading -->
                 <div class="sidebar-heading">
-                    Pengajuan
+                    Submission
                 </div>
 
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-book"></i>
-                        <span>Pengajuan Proposal</span>
+                        <span>Submission of Proposals</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Opsi</h6>
-                            <a class="collapse-item" href="<?= base_URL() ?>ajukan">Ajukan Proposal</a>
-                            <a class="collapse-item" href="<?= base_URL(); ?>draft">Draft Pengajuan</a>
+                            <h6 class="collapse-header">Options</h6>
+                            <a class="collapse-item" href="<?= base_URL() ?>ajukan">Submit a Proposal</a>
+                            <a class="collapse-item" href="<?= base_URL(); ?>draft">Draft Submissions</a>
                         </div>
                     </div>
                 </li>
@@ -78,13 +78,13 @@
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-table"></i>
-                        <span>Data Pengajuan</span>
+                        <span>Submissions Data</span>
                     </a>
                     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Data Pengajuan</h6>
-                            <a class="collapse-item" href="<?= base_URL(); ?>daftar-pengajuan">Daftar Pengajuan</a>
-                            <a class="collapse-item" href="<?= base_URL(); ?>riwayat">Riwayat Pengajuan</a>
+                            <h6 class="collapse-header">Options</h6>
+                            <a class="collapse-item" href="<?= base_URL(); ?>daftar-pengajuan">Submission List</a>
+                            <a class="collapse-item" href="<?= base_URL(); ?>riwayat">History Submission</a>
                         </div>
                     </div>
                 </li>
@@ -120,7 +120,7 @@
             <?php endif; ?>
             <!-- Heading -->
             <div class="sidebar-heading">
-                Akun
+                Account
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -239,7 +239,6 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="<?= base_URL(); ?>js/bootstrap.js"></script>
     <script src="<?= base_URL(); ?>vendor_style/jquery/jquery.min.js"></script>
     <script src="<?= base_URL(); ?>vendor_style/bootstrap/js/bootstrap.bundle.min.js"></script>
 

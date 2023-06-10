@@ -58,9 +58,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-outline-success">Kirim</a>
-                                            <a href="#" class="btn btn-outline-primary">Edit</a>
-                                            <a href="#" class="btn btn-outline-danger">Delete</a>
+                                            <a href="#" class="btn btn-outline-primary">Detail</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

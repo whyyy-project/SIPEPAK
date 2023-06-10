@@ -31,18 +31,6 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 
-// route login
-// $routes->group('', ['namespace' => '\Myth\Auth\Controllers'], function ($routes) {
-//     $routes->get('login', 'AuthController::login');
-//     $routes->post('login', 'AuthController::attemptLogin');
-//     $routes->get('register', 'AuthController::register');
-//     $routes->post('register', 'AuthController::attemptRegister');
-//     $routes->get('forgot', 'AuthController::forgotPassword');
-//     $routes->post('forgot', 'AuthController::attemptForgot');
-//     $routes->get('reset/(:any)', 'AuthController::resetPassword/$1');
-//     $routes->post('reset/(:any)', 'AuthController::attemptReset/$1');
-//     $routes->get('activate-account/(:any)', 'AuthController::activateAccount/$1');
-// });
 
 $routes->get('/', 'Pages::index');
 // after login

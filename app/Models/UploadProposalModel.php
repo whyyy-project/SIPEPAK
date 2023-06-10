@@ -53,14 +53,16 @@ class UploadProposalModel extends Model
     public function getDataRiwayat($id_user)
     {
         return $this->db->table('tb_pengajuan')
-            ->select('tb_pengajuan.id_pengajuan, tb_pengajuan.judul, tb_pengajuan.mulai, tb_pengajuan.selesai, tb_pengajuan.pdf, tb_pengajuan.id')
+            ->select('tb_pengajuan.id_pengajuan, tb_pengajuan.judul, tb_pengajuan.mulai, tb_pengajuan.selesai, tb_pengajuan.pdf, tb_pengajuan.id, tb_status_pengajuan.status, tb_status_pengajuan.keterangan, tb_atasan.nama_atasan')
+            ->join('tb_status_pengajuan', 'tb_status_pengajuan.id_pengajuan = tb_pengajuan.id_pengajuan', 'left')
             ->join('users', 'users.id = tb_pengajuan.id', 'left')
             ->join('tb_mahasiswa', 'tb_mahasiswa.id = tb_pengajuan.id', 'left')
-            ->join('tb_status_pengajuan', 'tb_status_pengajuan.id_pengajuan = tb_pengajuan.id_pengajuan', 'right')
+            ->join('tb_data_section', 'tb_data_section.id_data_section = tb_status_pengajuan.id_data_section')
+            ->join('tb_atasan', 'tb_atasan.id_atasan = tb_data_section.id_atasan')
             ->where('tb_pengajuan.id', $id_user)
             ->where('tb_pengajuan.status', 'filed')
-            ->where('tb_status_pengajuan.status', 'acc')
-            ->orderBy('tb_pengajuan.mulai', 'asc')
+            ->whereNotIn('tb_status_pengajuan.status', ['pending', 'progress'])
+            ->orderBy('tb_status_pengajuan.updated_at', 'desc')
             ->get()
             ->getResultArray();
     }

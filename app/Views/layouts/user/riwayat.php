@@ -24,28 +24,48 @@
                     <h6 class="m-0 font-weight-bold text-primary">Data Draft</h6>
                 </div>
                 <div class="card-body">
-
-
                     <!-- tabel pengajuan -->
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr class="text-center">
                                     <th>Judul Proposal</th>
-                                    <th>Waktu</th>
-                                    <th>PDF</th>
                                     <th>Atasan</th>
+                                    <th>Status</th>
+                                    <th>Keterangan</th>
                                     <th>opsi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($dataProposal as $dp) : ?>
-                                    <tr>
+                                    <?php
+                                    if ($dp['status'] == "acc") {
+                                        $color = "success";
+                                        $status = "Di-ACC";
+                                    } elseif ($dp['status'] == "revision") {
+                                        $color = "warning";
+                                        $status = "Revisi";
+                                    } else {
+                                        $color = "danger";
+                                        $status = "Ditolak";
+                                    } ?>
+                                    <tr class="text-center">
                                         <td><?= $dp['judul'] ?></td>
-                                        <td><?= $dp['mulai'] ?> - <?= $dp['selesai'] ?></td>
-                                        <td><a href="<?= base_url() ?>download/<?= $dp['pdf'] ?>" class="btn btn-outline-dark">Download</a></td>
-                                        <td>Di ACC</td>
-                                        <td><a href="#" class="btn btn-primary">Detail</a></td>
+                                        <td><?= $dp['nama_atasan'] ?></td>
+                                        <td>
+                                            <strong class="text-<?= $color ?>">
+                                                <?= $status ?>
+                                            </strong>
+                                        </td>
+                                        <td>
+                                            <?= $dp['keterangan'] ? $dp['keterangan'] : 'Keterangan Kosong'; ?>
+                                        </td>
+                                        <td>
+                                            <?php if ($dp['status'] == "revision") : ?>
+                                                <a href="#" class="btn btn-outline-warning">Revisi</a>
+                                            <?php endif; ?>
+                                            <a href="#" class="btn btn-outline-primary">Detail</a>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

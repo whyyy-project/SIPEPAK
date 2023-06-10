@@ -50,4 +50,18 @@ class UploadProposalModel extends Model
             ->get()
             ->getResultArray();
     }
+    public function getDataRiwayat($id_user)
+    {
+        return $this->db->table('tb_pengajuan')
+            ->select('tb_pengajuan.id_pengajuan, tb_pengajuan.judul, tb_pengajuan.mulai, tb_pengajuan.selesai, tb_pengajuan.pdf, tb_pengajuan.id')
+            ->join('users', 'users.id = tb_pengajuan.id', 'left')
+            ->join('tb_mahasiswa', 'tb_mahasiswa.id = tb_pengajuan.id', 'left')
+            ->join('tb_status_pengajuan', 'tb_status_pengajuan.id_pengajuan = tb_pengajuan.id_pengajuan', 'right')
+            ->where('tb_pengajuan.id', $id_user)
+            ->where('tb_pengajuan.status', 'filed')
+            ->where('tb_status_pengajuan.status', 'acc')
+            ->orderBy('tb_pengajuan.mulai', 'asc')
+            ->get()
+            ->getResultArray();
+    }
 }

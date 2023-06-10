@@ -5,14 +5,14 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-1">
-        <h1 class="h3 mb-0 text-gray-800">Daftar <strong>Pengajuan</strong></h1>
+        <h1 class="h3 mb-0 text-gray-800">Riwayat <strong>Pengajuan</strong></h1>
     </div>
     <!-- end page heading -->
     <div class="row ml-3">
         <p class="text-sm">
             <a href="<?= base_URL(); ?>user" class="btn btn-link">Dashboard</a> »
             <span class="ml-2">
-                Draft
+                Riwayat
             </span>
         </p>
     </div>
@@ -40,26 +40,12 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($dataProposal as $dp) : ?>
-                                    <tr class="text-center">
+                                    <tr>
                                         <td><?= $dp['judul'] ?></td>
                                         <td><?= $dp['mulai'] ?> - <?= $dp['selesai'] ?></td>
-                                        <td>
-                                            <a href="<?= base_url() ?>download/<?= $dp['pdf'] ?>" class="btn btn-outline-dark">Download</a>
-                                        </td>
-                                        <td class="text-left">
-                                            <?php $no = 1; ?>
-                                            <?php foreach ($dataStatus as $ds) : ?>
-                                                <?php if ($ds['id_pengajuan'] == $dp['id_pengajuan']) : ?>
-                                                    <p>
-                                                        <?= $no++ . ". " . $ds['nama_atasan'] ?>
-                                                    </p>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <a href="#" class="btn btn-outline-primary">Detail</a>
-                                        </td>
+                                        <td><a href="<?= base_url() ?>download/<?= $dp['pdf'] ?>" class="btn btn-outline-dark">Download</a></td>
+                                        <td>Di ACC</td>
+                                        <td><a href="#" class="btn btn-primary">Detail</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

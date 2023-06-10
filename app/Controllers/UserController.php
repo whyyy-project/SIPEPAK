@@ -99,4 +99,26 @@ class UserController extends BaseController
         ];
         return view('layouts/user/Draft', $data);
     }
+    public function Riwayat()
+    {
+        $id_user = user()->id;
+        $dataProposal = $this->pengajuan->getDataRiwayat($id_user);
+        // Loop melalui dataProposal untuk mengubah format tanggal
+        foreach ($dataProposal as $proposal) {
+            $mulai = Time::createFromFormat('Y-m-d', $proposal['mulai']);
+            $selesai = Time::createFromFormat('Y-m-d', $proposal['selesai']);
+            // Mengubah format tanggal menjadi "d F Y"
+            $formattedDate1 = $mulai->format('d F Y');
+            $formattedDate2 = $selesai->format('d F Y');
+            // Menyimpan tanggal yang sudah diubah formatnya ke dalam dataProposal
+            $proposal['mulai'] = $formattedDate1;
+            $proposal['selesai'] = $formattedDate2;
+        }
+        $data = [
+            'title'   => 'Data Pengajuan | User',
+            'id_user' => $id_user,
+            'dataProposal' => $dataProposal,
+        ];
+        return view('layouts/user/riwayat', $data);
+    }
 }

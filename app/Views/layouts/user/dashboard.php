@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="row no-gutters align-items-center">
                                     <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">On Progress</div>
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">See List</div>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="card-body">
                     <h6>What is <strong>SIPEPAK</strong> ?</h6>
-                    <p>SIPEPAK (<strong>S</strong>istem <strong>I</strong>nformasi <strong>Pe</strong>ngajuan <strong>P</strong>roposal <strong>A</strong>nggaran <strong>K</strong>egiatan) is a revolutionary platform specifically designed to speed up and simplify the process of submitting proposals for Unugiri students.</p>
+                    <p>SIPEPAK (Sistem Informasi Pengajuan Proposal Anggaran Kegiatan) is a revolutionary platform specifically designed to speed up and simplify the process of submitting proposals for Unugiri students.</p>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ use Myth\Auth\Controllers\AuthController as MythAuthController;
 
 class AuthController extends MythAuthController
 {
-    protected $redirectTo = '/dashboard';  // Ubah ini sesuai dengan rute yang Anda inginkan setelah login
+    protected $redirectTo = '/dashboard';
 
     public function login()
     {

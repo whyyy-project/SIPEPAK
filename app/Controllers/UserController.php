@@ -37,7 +37,6 @@ class UserController extends BaseController
             'title'   => 'Pengajuan | User',
             'section' => $this->bidangModel->getData()
         ];
-        // return view('template/template');
         return view('layouts/user/mengajukan', $data);
     }
     public function isiForm($slug)
@@ -56,10 +55,7 @@ class UserController extends BaseController
     }
     public function daftarPengajuan()
     {
-
-
         $id_user = user()->id;
-
         $dataProposal = $this->pengajuan->getDataPengajuan($id_user);
         // Loop melalui dataProposal untuk mengubah format tanggal
         foreach ($dataProposal as $proposal) {
@@ -72,14 +68,12 @@ class UserController extends BaseController
             $proposal['mulai'] = $formattedDate1;
             $proposal['selesai'] = $formattedDate2;
         }
-
         $data = [
-            'title'   => 'Pengajuan | User',
+            'title'   => 'Data Pengajuan | User',
             'id_user' => $id_user,
             'dataProposal' => $dataProposal,
             'dataStatus' => $this->dataPengajuan->GetDataAtasan(),
         ];
-        // return view('template/template');
         return view('layouts/user/daftarPengajuan', $data);
     }
 }

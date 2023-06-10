@@ -49,29 +49,8 @@
                                         <td>
                                             <?php foreach ($dataStatus as $ds) : ?>
                                                 <?php if ($ds['id_pengajuan'] == $dp['id_pengajuan']) : ?>
-                                                    <?php if ($ds['status_pengajuan'] == "pending") {
-                                                        $color = "secondary";
-                                                        $status = "Pending";
-                                                    } elseif ($ds['status_pengajuan'] == "progress") {
-                                                        $color = "primary";
-                                                        $status = "Menunggu ACC";
-                                                    } elseif ($ds['status_pengajuan'] == "acc") {
-                                                        $color = "success";
-                                                        $status = "Di-ACC";
-                                                    } elseif ($ds['status_pengajuan'] == "revision") {
-                                                        $color = "warning";
-                                                        $status = "Minta Revisi";
-                                                    } else {
-                                                        $color = "danger";
-                                                        $status = "Ditolak";
-                                                    } ?>
                                                     <p>
                                                         <?= $ds['nama_atasan'] ?>
-                                                        <strong>
-                                                            <sup class="text-<?= $color ?>">
-                                                                <?= $status ?>
-                                                            </sup>
-                                                        </strong>
                                                     </p>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>

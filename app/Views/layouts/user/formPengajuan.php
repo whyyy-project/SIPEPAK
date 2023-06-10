@@ -88,7 +88,7 @@
                         <div class="mb-3 row">
                             <label for="judul" class="col-md-4 col-form-label">Judul Proposal <sup class="text-danger">*</sup></label>
                             <div class="col-md-8">
-                                <input required type="text" name="judul" class="form-control text-center" id="judul" placeholder="Judul Proposal" value="<?= old('judul') ?>">
+                                <input required type="text" name="judul" class="form-control text-center" id="judul" autocomplete="off" placeholder="Judul Proposal" value="<?= old('judul') ?>">
                             </div>
                         </div>
                         <div class="mb-3 row">
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="pdf" class="col-md-4 col-form-label">Upload Proposal <sup class="text-danger">*</sup></label>
+                            <label for="pdf" class="col-md-4 col-form-label">Upload Proposal <small>(.pdf)</small> <sup class="text-danger">*</sup></label>
                             <div class="col-md-8">
                                 <input required type="file" class="form-control" name="pdf" id="pdf">
                             </div>

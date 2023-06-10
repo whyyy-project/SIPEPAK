@@ -18,17 +18,48 @@
 
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="<?= base_URL(); ?>css/bootstrap.css" />
-
     <!-- fonts style -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
     <!-- Custom styles for this template -->
+    <link href="<?= base_URL(); ?>vendor_style/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_URL(); ?>css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="<?= base_URL(); ?>css/responsive.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="<?= base_URL(); ?>favicon.ico" />
+    <style>
+        .top-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: none;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(50, 205, 50, 0.8);
+            opacity: inherit;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            animation: floating 2s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,7 +69,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
                     <a class="navbar-brand" href="/">
-                        <img src="images/logo.png" alt="" />
+                        <img loading="lazy" src="images/logo.png" alt="" />
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -47,18 +78,18 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="<?= base_url() ?>">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About</a>
+                                <a class="nav-link" href="#about" data-scroll> About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
+                                <a class="nav-link" href="#contact" data-scroll>Contact us</a>
                             </li>
                         </ul>
                         <div class="user_option">
                             <a href="/login">
-                                <img src="images/user.png" alt="">
+                                <img loading="lazy" src="images/user.png" alt="">
                                 <span>
                                     Login
                                 </span>
@@ -88,8 +119,8 @@
         <!-- slider section -->
         <section class="slider_section ">
             <div class="play_btn">
-                <a href="/login">
-                    <img src="images/play.png" alt="Login btn" title="Start Login">
+                <a href="<?= base_url() ?>login">
+                    <img loading="lazy" src="images/play.png" alt="Login btn" title="Start Login">
                 </a>
             </div>
             <div class="number_box">
@@ -125,10 +156,10 @@
                                             Selamat datang di SIPEPAK, membantu anda dalam mengajukan proposal se praktis mungkin
                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn-1">
+                                            <a href="https://youtu.be/ur2hp_R-UhA" class="btn-1">
                                                 User Guide
                                             </a>
-                                            <a href="#about" class="btn-2">
+                                            <a href="#about" data-scroll class="btn-2">
                                                 About
                                             </a>
                                         </div>
@@ -136,7 +167,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -155,10 +186,10 @@
                                             Memudahkan anda dalam mengajukan proposal hanya dengan sekali klik
                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn-1">
+                                            <a href="https://youtu.be/ur2hp_R-UhA" class="btn-1">
                                                 User Guide
                                             </a>
-                                            <a href="#about" class="btn-2">
+                                            <a href="#about" data-scroll class="btn-2">
                                                 About
                                             </a>
                                         </div>
@@ -166,7 +197,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -185,10 +216,10 @@
                                             Percepat proses pelaksanaan kegiatan anda dengan SIPEPAK
                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn-1">
+                                            <a href="https://youtu.be/ur2hp_R-UhA" class="btn-1">
                                                 User Guide
                                             </a>
-                                            <a href="#about" class="btn-2">
+                                            <a href="#about" data-scroll class="btn-2">
                                                 About
                                             </a>
                                         </div>
@@ -196,7 +227,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -215,10 +246,10 @@
                                             Lebih cepat dengan SIPEPAK
                                         </p>
                                         <div class="btn-box">
-                                            <a href="" class="btn-1">
+                                            <a href="https://youtu.be/ur2hp_R-UhA" class="btn-1">
                                                 User Guide
                                             </a>
-                                            <a href="#about" class="btn-2">
+                                            <a href="#about" data-scroll class="btn-2">
                                                 About
                                             </a>
                                         </div>
@@ -226,7 +257,7 @@
                                 </div>
                                 <div class="col-md-6 img-container">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/logo-img.png" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/logo-img.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -241,33 +272,58 @@
 
     <!-- about section -->
 
-    <section class="about_section layout_padding">
+    <section class="about_section layout_padding" id="about">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
                     <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                About Us
-                            </h2>
-
+                        <div class="heading_container text-justify">
+                            <h2>About Us</h2>
                         </div>
                         <p>
-                            Penugasan UAS Management Perangkat Lunak,
+                            Selamat datang di SIPEPAK (Sistem Informasi Pengajuan Proposal Anggaran Kegiatan) - platform inovatif yang dirancang khusus untuk memudahkan dan mempercepat proses pengajuan proposal bagi mahasiswa Unugiri. Dengan SIPEPAK, mahasiswa dapat dengan mudah mengajukan proposal kegiatan mereka tanpa hambatan.
                         </p>
-                        <a href="">
-                            User Guide
-                        </a>
+                        <div class="d-none" id="text-hidden">
+                            <p>
+                                SIPEPAK memberikan kemudahan bagi mahasiswa Unugiri untuk mengakses platform yang intuitif dan efisien. Dalam platform ini, mahasiswa dapat mengisi formulir pengajuan proposal dengan langkah-langkah yang jelas dan sistematis. SIPEPAK juga memberikan ruang bagi mahasiswa untuk melampirkan dokumen pendukung, memasukkan detail anggaran, serta menjelaskan tujuan dan manfaat dari kegiatan yang diajukan.
+                            </p>
+                            <p>
+                                Dengan SIPEPAK, mahasiswa tidak perlu lagi khawatir tentang proses pengajuan proposal yang rumit dan memakan waktu. Platform ini memberikan kemudahan dalam mengajukan proposal, mempercepat peninjauan dan persetujuan oleh pihak terkait, serta meningkatkan transparansi dalam manajemen anggaran kegiatan.
+                            </p>
+                            <p>
+                                Selain itu, SIPEPAK juga memberikan perlindungan terhadap keamanan data pengguna. Dengan mengatur atribut-atribut cookie, seperti SameSite=None dan Secure, SIPEPAK memastikan bahwa data pengguna aman dari ancaman kebocoran informasi atau serangan cross-site request forgery.
+                            </p>
+                            <p>
+                                Jadi, mari manfaatkan SIPEPAK sebagai alat yang membantu kita mengajukan proposal dengan mudah dan memastikan bahwa setiap kegiatan mahasiswa di Unugiri mendapatkan perhatian yang layak. Bersama SIPEPAK, kita dapat mewujudkan ide-ide kreatif dan memberikan dampak positif bagi komunitas kita.
+                            </p>
+                        </div>
+                        <a href="#about" data-scroll id="readMoreBtn" onclick="toggleText()" data-scroll>Read More</a>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="img-box">
-                        <img src="images/icon.png" alt="">
+                        <img loading="lazy" class="d-md-flex d-lg-block d-sm-none" src="images/icon.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        function toggleText() {
+            var hiddenText = document.getElementById("text-hidden");
+            var readMoreBtn = document.getElementById("readMoreBtn");
+
+            if (hiddenText.classList.contains("d-none")) {
+                hiddenText.classList.remove("d-none");
+                readMoreBtn.textContent = "Close";
+            } else {
+                hiddenText.classList.add("d-none");
+                readMoreBtn.textContent = "Read More";
+            }
+        }
+    </script>
+
 
     <!-- end about section -->
 
@@ -281,7 +337,7 @@
                         <div class="detail-box">
                             <div class="heading_container">
                                 <h2>
-                                    Teams Production
+                                    Development Team
                                 </h2>
                             </div>
                             <div class="tab_container">
@@ -371,18 +427,18 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why2.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why2.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why4.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why4.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why5.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why5.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -391,19 +447,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
 
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -412,18 +468,18 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -432,19 +488,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -453,19 +509,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -474,19 +530,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -524,7 +580,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="img-box">
-                        <img src="images/logo-img.png" alt="">
+                        <img loading="lazy" src="images/logo-img.png" alt="">
                     </div>
                 </div>
             </div>
@@ -536,7 +592,7 @@
 
 
     <!-- info section -->
-    <section class="info_section layout_padding2">
+    <section class="info_section layout_padding2" id="contact">
         <div class="container">
             <div class="info_logo">
                 <h2>
@@ -544,7 +600,6 @@
                 SIPEPAK
             </div>
             <div class="row">
-
                 <div class="col-md-4">
                     <div class="info_contact">
                         <h5>
@@ -552,15 +607,15 @@
                         </h5>
                         <div>
                             <div class="img-box">
-                                <img src="images/location-white.png" width="18px" alt="">
+                                <img loading="lazy" src="images/location-white.png" width="18px" alt="">
                             </div>
-                            <p>
+                            <p class="text-justify">
                                 Jl. Ahmad Yani No. 10, Jambean, Sukorejo, Kec. Bojonegoro, Kabupaten Bojonegoro, Jawa Timur 62115
                             </p>
                         </div>
                         <div>
                             <div class="img-box">
-                                <img src="images/telephone-white.png" width="12px" alt="">
+                                <img loading="lazy" src="images/telephone-white.png" width="12px" alt="">
                             </div>
                             <p>
                                 (0353) 887341
@@ -568,10 +623,10 @@
                         </div>
                         <div>
                             <div class="img-box">
-                                <img src="images/envelope-white.png" width="18px" alt="">
+                                <img loading="lazy" src="images/envelope-white.png" width="18px" alt="">
                             </div>
                             <p>
-                                lipk@unugiri.ac.id
+                                info@unugiri.ac.id
                             </p>
                         </div>
                     </div>
@@ -581,35 +636,60 @@
                         <h5>
                             Informations
                         </h5>
-                        <p>
-                            Universitas Nahdlatul Ulama Sunan Giri Bojonegoro
+                        <p class="text-justify">
+                            SIPEPAK (Sistem Informasi Pengajuan Proposal Anggaran Kegiatan) Universitas Nahdlatul Ulama Sunan Giri Bojonegoro
                         </p>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="info_form ">
+                    <div class="info_form">
                         <h5>
-                            Newsletter
+                            Sites
                         </h5>
-                        <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button>
-                                Subscribe
-                            </button>
-                        </form>
+                        <div class="d-flex justify-align-content-between">
+                            <div class="img-box">
+                                <img loading="lazy" src="images/envelope-white.png" width="20px" alt="">
+                            </div>
+                            <p class="ml-2">
+                                <a href="#" class="text-decoration-none text-white">
+                                    unugiri.ac.id
+                                </a>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-align-content-between">
+                            <div class="img-box">
+                                <img loading="lazy" src="images/envelope-white.png" width="20px" alt="">
+                            </div>
+                            <p class="ml-2">
+                                <a href="#" class="text-decoration-none text-white">
+                                    sim.unugiri.ac.id
+                                </a>
+                            </p>
+                        </div>
+                        <div class="d-flex justify-align-content-between">
+                            <div class="img-box">
+                                <img loading="lazy" src="images/envelope-white.png" width="20px" alt="">
+                            </div>
+                            <p class="ml-2">
+                                <a href="#" class="text-decoration-none text-white">
+                                    info.unugiri.ac.id
+                                </a>
+                            </p>
+                        </div>
+
                         <div class="social_box">
                             <a href="">
-                                <img src="images/fb.png" alt="">
+                                <img loading="lazy" src="images/fb.png" alt="">
                             </a>
                             <a href="">
-                                <img src="images/twitter.png" alt="">
+                                <img loading="lazy" src="images/twitter.png" alt="">
                             </a>
                             <a href="">
-                                <img src="images/linkedin.png" alt="">
+                                <img loading="lazy" src="images/linkedin.png" alt="">
                             </a>
                             <a href="">
-                                <img src="images/youtube.png" alt="">
+                                <img loading="lazy" src="images/youtube.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -632,10 +712,40 @@
     </section>
     <!-- end  footer section -->
 
+    <!-- button to top -->
+    <i id="topButton" onclick="scrollToTop()" class="top-btn fas fa-arrow-alt-circle-up"></i>
 
+    <!-- end button to top -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
     <script type="text/javascript" src="<?= base_URL(); ?>js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="<?= base_URL(); ?>js/bootstrap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+    </script>
+    <script>
+        var scroll = new SmoothScroll('a[data-scroll]', {
+            speed: 1000, // Kecepatan scroll (dalam milidetik)
+            easing: 'easeInOutCubic', // Gaya transisi scroll
+            offset: 100 // Jarak offset dari elemen target (dalam piksel)
+        });
+    </script>
+    <script>
+        var topButton = document.getElementById("topButton");
+
+        window.addEventListener("scroll", function() {
+            if (window.pageYOffset > 0) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
     </script>
     <script type="text/javascript">
         $(".owl-carousel").owlCarousel({

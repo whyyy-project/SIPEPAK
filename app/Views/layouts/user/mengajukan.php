@@ -6,14 +6,14 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-1">
-        <h1 class="h3 mb-0 text-gray-800">Pilih <strong>Bidang</strong></h1>
+        <h1 class="h3 mb-0 text-gray-800">Select <strong>Section</strong></h1>
         <hr>
     </div>
     <div class="row ml-3">
         <p class="text-sm">
             <a href="<?= base_URL(); ?>user" class="btn btn-link">Dashboard</a> »
             <span class="ml-2">
-                Pilih Bidang
+                Select Section
             </span>
         </p>
     </div>

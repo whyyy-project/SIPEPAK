@@ -47,6 +47,7 @@ $routes->group('', ['filter' => 'role:user'], function ($routes) {
     $routes->get('/daftar-pengajuan', 'UserController::daftarPengajuan');
     $routes->get('/download/(:segment)', 'ProposalUserController::downloadProposal/$1');
     $routes->get('/draft', 'UserController::Draft');
+    $routes->get('/kirim-proposal/(:segment)', 'UserController::submitDraft/$1');
     $routes->get('/riwayat', 'UserController::Riwayat');
     $routes->get('/profile', 'UserController::index');
 });

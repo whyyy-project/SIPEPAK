@@ -66,4 +66,26 @@ class UploadProposalModel extends Model
             ->get()
             ->getResultArray();
     }
+    public function getDataById($id)
+    {
+        return $this->where('id_pengajuan', $id)->limit(1)->findAll();
+    }
+
+    public function submitDraft($id_pengajuan)
+    {
+        $this->db->table('tb_pengajuan')
+            ->where('id_pengajuan', $id_pengajuan)
+            ->update(['status' => 'filed']);
+
+        $id_data_section = $this->db->table('tb_pengajuan')
+            ->select('tb_data_section.id_data_section')
+            ->join('tb_status_pengajuan', 'tb_status_pengajuan.id_pengajuan = tb_pengajuan.id_pengajuan', 'left')
+            ->join('tb_data_section', 'tb_data_section.id_data_section = tb_status_pengajuan.id_data_section')
+            ->where('tb_pengajuan.id_pengajuan', $id_pengajuan)
+            ->where('tb_data_section.no_urut', 1);
+
+        $this->db->table('tb_status_pengajuan')
+            ->where('id_data_section', $id_data_section)
+            ->update(['status' => 'progress']);
+    }
 }

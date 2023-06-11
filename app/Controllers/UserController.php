@@ -99,6 +99,15 @@ class UserController extends BaseController
         ];
         return view('layouts/user/Draft', $data);
     }
+    public function submitDraft($idPengajuan)
+    {
+        // jika data kosong
+        if ($this->pengajuan->getDataById($idPengajuan) == null) {
+            return redirect()->to('/draft')->with('error', 'Data Proposal tidak Ditemukan.');
+        }
+        $this->pengajuan->submitDraft($idPengajuan);
+        return redirect()->to('/draft')->with('success', 'Berhasil Mengirim Proposal.');
+    }
     public function Riwayat()
     {
         $id_user = user()->id;

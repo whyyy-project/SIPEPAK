@@ -24,7 +24,17 @@
                     <h6 class="m-0 font-weight-bold text-primary">Data Draft</h6>
                 </div>
                 <div class="card-body">
+                    <?php if (session()->getFlashData('success')) : ?>
+                        <div class="alert alert-success">
+                            <?= session()->getFlashData('success') ?>
+                        </div>
+                    <?php endif ?>
 
+                    <?php if (session()->getFlashData('error')) : ?>
+                        <div class="alert alert-danger">
+                            <?= session()->getFlashData('error') ?>
+                        </div>
+                    <?php endif ?>
 
                     <!-- tabel pengajuan -->
                     <div class="table-responsive">
@@ -58,7 +68,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                            <a href="#" class="btn btn-outline-success">Kirim</a>
+                                            <a href="<?= base_url() ?>kirim-proposal/<?= $dp['id_pengajuan'] ?>" class="btn btn-outline-success">Kirim</a>
                                             <a href="#" class="btn btn-outline-primary">Edit</a>
                                             <a href="#" class="btn btn-outline-danger">Delete</a>
                                         </td>

@@ -27,39 +27,7 @@
     <link href="<?= base_URL(); ?>css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="<?= base_URL(); ?>css/responsive.css" rel="stylesheet" />
-    <style>
-        .top-btn {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            display: none;
-            width: 50px;
-            height: 50px;
-            background-color: rgba(50, 205, 50, 0.8);
-            opacity: inherit;
-            color: #fff;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 50px;
-            font-size: 18px;
-            cursor: pointer;
-            animation: floating 2s ease-in-out infinite;
-        }
 
-        @keyframes floating {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -280,24 +248,9 @@
                         <div class="heading_container text-justify">
                             <h2>About Us</h2>
                         </div>
-                        <p>
-                            Selamat datang di SIPEPAK (Sistem Informasi Pengajuan Proposal Anggaran Kegiatan) - platform inovatif yang dirancang khusus untuk memudahkan dan mempercepat proses pengajuan proposal bagi mahasiswa Unugiri. Dengan SIPEPAK, mahasiswa dapat dengan mudah mengajukan proposal kegiatan mereka tanpa hambatan.
-                        </p>
-                        <div class="d-none" id="text-hidden">
-                            <p>
-                                SIPEPAK memberikan kemudahan bagi mahasiswa Unugiri untuk mengakses platform yang intuitif dan efisien. Dalam platform ini, mahasiswa dapat mengisi formulir pengajuan proposal dengan langkah-langkah yang jelas dan sistematis. SIPEPAK juga memberikan ruang bagi mahasiswa untuk melampirkan dokumen pendukung, memasukkan detail anggaran, serta menjelaskan tujuan dan manfaat dari kegiatan yang diajukan.
-                            </p>
-                            <p>
-                                Dengan SIPEPAK, mahasiswa tidak perlu lagi khawatir tentang proses pengajuan proposal yang rumit dan memakan waktu. Platform ini memberikan kemudahan dalam mengajukan proposal, mempercepat peninjauan dan persetujuan oleh pihak terkait, serta meningkatkan transparansi dalam manajemen anggaran kegiatan.
-                            </p>
-                            <p>
-                                Selain itu, SIPEPAK juga memberikan perlindungan terhadap keamanan data pengguna. Dengan mengatur atribut-atribut cookie, seperti SameSite=None dan Secure, SIPEPAK memastikan bahwa data pengguna aman dari ancaman kebocoran informasi atau serangan cross-site request forgery.
-                            </p>
-                            <p>
-                                Jadi, mari manfaatkan SIPEPAK sebagai alat yang membantu kita mengajukan proposal dengan mudah dan memastikan bahwa setiap kegiatan mahasiswa di Unugiri mendapatkan perhatian yang layak. Bersama SIPEPAK, kita dapat mewujudkan ide-ide kreatif dan memberikan dampak positif bagi komunitas kita.
-                            </p>
+                        <div class="text-justify">
+                            <strong>SIPEPAK </strong><span id="typing-text"></span>
                         </div>
-                        <a href="#about" data-scroll id="readMoreBtn" onclick="toggleText()" data-scroll>Read More</a>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -309,20 +262,6 @@
         </div>
     </section>
 
-    <script>
-        function toggleText() {
-            var hiddenText = document.getElementById("text-hidden");
-            var readMoreBtn = document.getElementById("readMoreBtn");
-
-            if (hiddenText.classList.contains("d-none")) {
-                hiddenText.classList.remove("d-none");
-                readMoreBtn.textContent = "Close";
-            } else {
-                hiddenText.classList.add("d-none");
-                readMoreBtn.textContent = "Read More";
-            }
-        }
-    </script>
 
 
     <!-- end about section -->
@@ -711,7 +650,6 @@
         </div>
     </section>
     <!-- end  footer section -->
-
     <!-- button to top -->
     <i id="topButton" onclick="scrollToTop()" class="top-btn fas fa-arrow-alt-circle-up"></i>
 
@@ -722,71 +660,7 @@
     <script type="text/javascript" src="<?= base_URL(); ?>js/bootstrap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
     </script>
-    <script>
-        var scroll = new SmoothScroll('a[data-scroll]', {
-            speed: 1000, // Kecepatan scroll (dalam milidetik)
-            easing: 'easeInOutCubic', // Gaya transisi scroll
-            offset: 100 // Jarak offset dari elemen target (dalam piksel)
-        });
-    </script>
-    <script>
-        var topButton = document.getElementById("topButton");
-
-        window.addEventListener("scroll", function() {
-            if (window.pageYOffset > 0) {
-                topButton.style.display = "block";
-            } else {
-                topButton.style.display = "none";
-            }
-        });
-
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    </script>
-    <script type="text/javascript">
-        $(".owl-carousel").owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: true,
-            navText: [],
-            autoplay: true,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                420: {
-                    items: 2
-                },
-                1000: {
-                    items: 5
-                }
-            }
-
-        });
-    </script>
-    <script>
-        var nav = $("#navbarSupportedContent");
-        var btn = $(".custom_menu-btn");
-        btn.click
-        btn.click(function(e) {
-
-            e.preventDefault();
-            nav.toggleClass("lg_nav-toggle");
-            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
-        });
-    </script>
-    <script>
-        $('.carousel').on('slid.bs.carousel', function() {
-            $(".indicator-2 li").removeClass("active");
-            indicators = $(".carousel-indicators li.active").data("slide-to");
-            a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
-        })
-    </script>
+    <script src="<?= base_url() ?>js/custom-cover.js"></script>
 
 </body>
 </body>

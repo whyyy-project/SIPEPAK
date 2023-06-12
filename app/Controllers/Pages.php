@@ -37,11 +37,16 @@ class Pages extends BaseController
                 'title' => 'Dashboard | Atasan'
             ];
             return view('layouts/atasan/dashboard', $data);
-        } else {
+        } else if (in_groups('user')) {
             $data = [
                 'title' => 'Dashboard | User'
             ];
             return view('layouts/user/dashboard', $data);
+        } else {
+            $data = [
+                'message' => 'Akun anda ' . user()->username . ' sedang Eror. Harap hubungi Admin'
+            ];
+            return view('errors/html/error_404', $data);
         }
     }
 }

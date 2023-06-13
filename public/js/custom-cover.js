@@ -19,7 +19,7 @@ function typeWriter() {
         setTimeout(typeWriter, 30); // Waktu pengetikan per karakter (ms)
     } else {
         // Menghapus teks sebelumnya sebelum melanjutkan ke teks berikutnya
-        setTimeout(eraseText, 2000);
+        setTimeout(eraseText, 1200);
     }
 }
 

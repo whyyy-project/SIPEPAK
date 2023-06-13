@@ -106,7 +106,7 @@
                 </div>
                 <div class="card-body">
                     <h6>What is <strong>SIPEPAK</strong> ?</h6>
-                    <p>SIPEPAK (Sistem Informasi Pengajuan Proposal Anggaran Kegiatan) is a revolutionary platform specifically designed to speed up and simplify the process of submitting proposals for Unugiri students.</p>
+                    <p><strong>SIPEPAK</strong> <span id="typing-text"></span></p>
                 </div>
             </div>
         </div>

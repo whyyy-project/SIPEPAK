@@ -28,7 +28,7 @@
             $randomValue = $dataArray[$randomIndex];
             ?>
             <!-- card section -->
-            <div class="col-xl-3 col-md-6 col-sm-6 col-6 mb-4">
+            <div class="col-xl-3 col-md-6 col-sm-12 mb-4">
                 <div class="card border-left-<?= $randomValue ?> shadow h-100 py-2">
                     <a href="<?= base_URL(); ?>ajukan/<?= $s['slug']; ?>" style="text-decoration: none;">
                         <div class="card-body">

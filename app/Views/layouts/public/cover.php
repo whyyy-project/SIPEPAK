@@ -358,7 +358,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSeven">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                                     <div class="number">
                                         <h5>
                                             07
@@ -497,7 +497,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="collapse" id="collapseSix" aria-labelledby="headingsix" data-parent="#accordion">
+                        <div class="collapse" id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordion">
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">

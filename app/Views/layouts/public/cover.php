@@ -332,7 +332,7 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFour">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     <div class="number">
                                         <h5>
                                             05
@@ -341,14 +341,27 @@
                                     <hr>
                                     <div class="t-name">
                                         <h5>
-                                            Ach. syarif hidayatullah
+                                            Ach. Syarif Hidayatullah
                                         </h5>
                                     </div>
                                 </div>
-                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseFour">
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                     <div class="number">
                                         <h5>
                                             06
+                                        </h5>
+                                    </div>
+                                    <hr>
+                                    <div class="t-name">
+                                        <h5>
+                                            Ali Ahmadi
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="t-link-box collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSeven">
+                                    <div class="number">
+                                        <h5>
+                                            07
                                         </h5>
                                     </div>
                                     <hr>
@@ -386,19 +399,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/RR (1).jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/RR (2).jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
 
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/RR (3).jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ridho1.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -407,18 +420,18 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/NAJA (1).jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/NAJA (2).jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/NAJA (3).jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/NAJA (4).jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -427,19 +440,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ANJAR (1).jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ANJAR (2).jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ANJAR (3).jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/ANJAR (3).jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -448,19 +461,19 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/SARIP (1).jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/SARIP (2).jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/SARIP (3).jpg" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/SARIP (4).jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -469,19 +482,38 @@
                             <div class="img_container ">
                                 <div class="box b-1">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/didon (1).jpg" alt="">
                                     </div>
 
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/didon (2).jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="box b-2">
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/didon (3).jpg" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse" id="collapseSix" aria-labelledby="headingsix" data-parent="#accordion">
+                            <div class="img_container ">
+                                <div class="box b-1">
+                                    <div class="img-box">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/hbb (1).png" alt="">
+                                    </div>
+
+                                    <div class="img-box">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/hbb (2).png" alt="">
+                                    </div>
+                                </div>
+                                <div class="box b-2">
+                                    <div class="img-box">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/hbb (3).png" alt="">
                                     </div>
                                     <div class="img-box">
-                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/why3.jpg" alt="">
+                                        <img loading="lazy" src="<?= base_URL(); ?>images/teams/hbb (4).png" alt="">
                                     </div>
                                 </div>
                             </div>

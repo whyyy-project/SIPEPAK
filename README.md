@@ -7,3 +7,4 @@
 
 - untuk fitur login saya menggunakan library myth auth, jadi jika mau clone wajib setting di file vendor/myth/auth
 - atau hubungi saya jika ingin mencoba clone / mengembangkan
+- link GitHub : https://github.com/whyyy24/SIPEPAK
